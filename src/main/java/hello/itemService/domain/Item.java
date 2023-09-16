@@ -6,13 +6,13 @@ import lombok.Data;
 @Data
 public class Item {
     private Long id;
-    private String name;
+    private String itemName;
     private Integer price;
     private Integer quantity;
 
-    public Item(Long id, String name, Integer price, Integer quantity) {
+    public Item(Long id, String itemName, Integer price, Integer quantity) {
         this.id = id;
-        this.name = name;
+        this.itemName = itemName;
         this.price = price;
         this.quantity = quantity;
     }
