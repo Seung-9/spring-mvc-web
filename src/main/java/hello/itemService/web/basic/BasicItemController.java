@@ -27,12 +27,19 @@ public class BasicItemController {
         return "/basic/items";
     }
 
+    // 상품 상세 조회
     @GetMapping("/{itemId}")
     public String item(Model model, @PathVariable Long itemId) {
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
 
         return "/basic/item";
+    }
+
+    // 상품 등록 폼 추가
+    @GetMapping("/add")
+    public String addForm() {
+        return "/basic/addForm";
     }
 
     // 테스트용 데이터 추가. 초기화 콜백
